@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "img"
+public_folder: "/img"
+
+collections:
+  - name: "berita"
+    label: "Berita"
+    folder: "content/berita"
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    fields:
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Tanggal", name: "date", widget: "datetime" }
+      - { label: "Kategori/Label", name: "label", widget: "string", hint: "Contoh: Sosialisasi, Pelatihan, Penyuluhan, Kegiatan" }
+      - { label: "Foto utama", name: "image", widget: "image", required: false }
+      - { label: "Ringkasan (tampil di kartu)", name: "excerpt", widget: "text" }
+      - { label: "Isi berita", name: "body", widget: "markdown" }

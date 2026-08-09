@@ -1,0 +1,69 @@
+---
+layout: base.njk
+pageTitle: "Beranda — PBW Nagari Kamang Mudiak"
+pageDescription: "Situs program Pemberdayaan Berbasis Wilayah (PBW) Nagari Kamang Mudiak: pertanian terpadu, pengolahan pangan bergizi, ketahanan pangan, dan pencegahan stunting."
+activeNav: "beranda"
+permalink: "index.html"
+---
+<!-- ================= BAGIAN: HERO ================= -->
+<section class="hero">
+  <div class="wadah hero-isi">
+    <span class="mata-teks">Nagari Kamang Mudiak · Kab. Agam · Sumatera Barat</span>
+    <h1>Pemberdayaan Berbasis Wilayah Nagari Kamang Mudiak melalui Sistem Pertanian Terpadu dan Pengolahan Pangan Bergizi untuk Penguatan Ketahanan Pangan dan Pencegahan Stunting</h1>
+    <p class="pembuka">Program pengabdian masyarakat yang memadukan hidroponik, pengolahan pakan ternak, komposter, dan teknologi pengolahan pangan untuk menghadirkan pangan bergizi dari nagari, oleh nagari.</p>
+    <div class="baris-tombol">
+      <a class="tombol tombol-isi" href="/tentang.html">Tentang program</a>
+      <a class="tombol tombol-garis" href="/produk.html">Lihat produk</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BAGIAN: TIGA PILAR PROGRAM ================= -->
+<section class="bagian">
+  <div class="wadah">
+    <h2 class="judul-bagian">Tiga pilar program</h2>
+    <p class="sub-bagian">Seluruh kegiatan PBW ini bertumpu pada tiga pilar yang saling terhubung, dari lahan sampai meja makan keluarga.</p>
+    <div class="kisi">
+      <article class="kartu">
+        <span class="label">Pilar 1</span>
+        <h3>Pertanian terpadu</h3>
+        <p>Instalasi hidroponik NFT, pengolahan pakan ternak, dan komposter menyatukan siklus tanam–ternak–limbah dalam satu sistem di nagari.</p>
+        <a class="tautan-lanjut" href="/ttg.html">Lihat alat yang diadakan →</a>
+      </article>
+      <article class="kartu">
+        <span class="label">Pilar 2</span>
+        <h3>Pengolahan pangan bergizi</h3>
+        <p>Hasil panen dan ternak diolah dengan mesin vacuum sealer, retort, dan chopper–grinder menjadi produk pangan bernilai tambah.</p>
+        <a class="tautan-lanjut" href="/produk.html">Lihat katalog produk →</a>
+      </article>
+      <article class="kartu">
+        <span class="label">Pilar 3</span>
+        <h3>Pencegahan stunting</h3>
+        <p>Edukasi gizi dan penyediaan pangan bergizi terjangkau menyasar keluarga dengan balita untuk menekan angka stunting di Kamang Mudiak.</p>
+        <a class="tautan-lanjut" href="/berita.html">Ikuti kegiatannya →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BAGIAN: BERITA TERBARU (cuplikan) ================= -->
+<section class="bagian">
+  <div class="wadah">
+    <h2 class="judul-bagian">Berita terbaru</h2>
+    <p class="sub-bagian">Arsip kegiatan terus bertambah sepanjang program berjalan.</p>
+    <div class="kisi">
+      {% for item in collections.berita.slice(0, 3) %}
+      <article class="kartu">
+        <div class="kotak-gambar">{% if item.data.image %}<img src="{{ item.data.image }}" alt="{{ item.data.title }}">{% else %}Foto kegiatan{% endif %}</div>
+        <span class="label">{{ item.data.label }}</span>
+        <h3>{{ item.data.title }}</h3>
+        <p>{{ item.data.excerpt }}</p>
+        <a class="tautan-lanjut" href="{{ item.url }}">Baca selengkapnya →</a>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="baris-tombol">
+      <a class="tombol tombol-garis" href="/berita.html">Lihat semua berita</a>
+    </div>
+  </div>
+</section>

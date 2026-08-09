@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if pageTitle %}{{ pageTitle }}{% else %}{{ title }} — PBW Nagari Kamang Mudiak{% endif %}</title>
+  <meta name="description" content="{% if pageDescription %}{{ pageDescription }}{% elif excerpt %}{{ excerpt }}{% else %}Situs program Pemberdayaan Berbasis Wilayah (PBW) Nagari Kamang Mudiak: pertanian terpadu, pengolahan pangan bergizi, ketahanan pangan, dan pencegahan stunting.{% endif %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- ================= BAGIAN: HEADER & NAVIGASI ================= -->
+  <header class="kepala-situs">
+    <div class="wadah kepala-baris">
+      <a class="merek" href="/index.html">
+        <svg viewBox="0 0 40 40" aria-hidden="true" fill="none">
+        <path d="M20 36V14" stroke="#dfa22e" stroke-width="3" stroke-linecap="round"/>
+        <path d="M20 20c-7 0-11-5-11-12 7 0 11 5 11 12Z" fill="#e7f0e4"/>
+        <path d="M20 20c7 0 11-5 11-12-7 0-11 5-11 12Z" fill="#dfa22e"/>
+      </svg>
+        <span>
+          <b>PBW Kamang Mudiak</b>
+          <small>Pemberdayaan Berbasis Wilayah</small>
+        </span>
+      </a>
+      <button class="tombol-menu" aria-expanded="false" aria-controls="nav-utama">Menu ☰</button>
+      <nav class="nav-utama" id="nav-utama" aria-label="Navigasi utama">
+        <ul>
+          {% for item in navItems %}
+          <li><a href="/{{ item.href }}"{% if activeNav == item.key %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="pucuak" aria-hidden="true"></div>
+
+  <main>
+  {{ content | safe }}
+  </main>
+
+  <!-- ================= BAGIAN: FOOTER ================= -->
+  <div class="pucuak" aria-hidden="true"></div>
+  <footer class="kaki-situs">
+    <div class="wadah kaki-baris">
+      <p>© 2026 Tim PBW Nagari Kamang Mudiak.<br>
+         Skema Pemberdayaan Berbasis Wilayah (PBW) — DRTPM Kemdiktisaintek.</p>
+      <p>Ketua: Dr. Junios, S.Si., M.Si<br>
+         <a href="/galeri.html#kontak">Hubungi kami</a></p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function (user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function () {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

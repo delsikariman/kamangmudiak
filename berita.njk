@@ -1,0 +1,27 @@
+---
+layout: base.njk
+pageTitle: "Berita — PBW Nagari Kamang Mudiak"
+pageDescription: "Situs program Pemberdayaan Berbasis Wilayah (PBW) Nagari Kamang Mudiak: pertanian terpadu, pengolahan pangan bergizi, ketahanan pangan, dan pencegahan stunting."
+activeNav: "berita"
+permalink: "berita.html"
+---
+<!-- ================= BAGIAN: ARSIP BERITA ================= -->
+<section class="bagian">
+  <div class="wadah">
+    <span class="mata-teks">Arsip · terus bertambah</span>
+    <h2 class="judul-bagian">Berita kegiatan</h2>
+    <p class="sub-bagian">Setiap kegiatan program didokumentasikan di sini.</p>
+
+    <div class="kisi">
+      {% for item in collections.berita %}
+      <article class="kartu">
+        <div class="kotak-gambar">{% if item.data.image %}<img src="{{ item.data.image }}" alt="{{ item.data.title }}">{% else %}Foto kegiatan{% endif %}</div>
+        <span class="label">{{ item.data.label }} · {{ item.date | bulanTahunIndo }}</span>
+        <h3>{{ item.data.title }}</h3>
+        <p>{{ item.data.excerpt }}</p>
+        <a class="tautan-lanjut" href="{{ item.url }}">Baca selengkapnya →</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

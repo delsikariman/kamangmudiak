@@ -1,0 +1,16 @@
+---
+layout: base.njk
+---
+<section class="bagian">
+  <div class="wadah artikel">
+    <a href="/berita.html">← Kembali ke arsip berita</a>
+    <h1>{{ title }}</h1>
+    <p class="meta-artikel">Ditulis oleh Tim PBW · {{ date | bulanTahunIndo }} · Kategori: {{ label }}</p>
+    {% if image %}
+    <figure>
+      <div class="kotak-gambar"><img src="{{ image }}" alt="{{ title }}"></div>
+    </figure>
+    {% endif %}
+    {{ content | safe }}
+  </div>
+</section>

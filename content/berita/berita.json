@@ -1,0 +1,6 @@
+{
+  "layout": "berita-detail.njk",
+  "tags": ["berita"],
+  "activeNav": "berita",
+  "permalink": "berita/{{ page.fileSlug }}/index.html"
+}
