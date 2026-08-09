@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: delsikariman/kamangmudiak
+  name: git-gateway
   branch: main
 
 media_folder: "img"
