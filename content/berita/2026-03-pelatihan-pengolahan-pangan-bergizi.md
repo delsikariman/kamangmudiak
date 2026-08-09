@@ -1,9 +1,12 @@
 ---
-title: "Pelatihan dan Pendampingan Pengolahan Pangan Bergizi Berbasis Hasil Pertanian dan Peternakan Lokal"
-date: 2026-03-10
-label: "Pelatihan"
-image: "/img/galeri-01-pelatihan-pengolahan-pangan.jpeg"
-excerpt: "Pelatihan pengolahan pangan bergizi berbasis hasil pertanian dan peternakan lokal untuk memperkuat ketahanan pangan keluarga dan mencegah stunting."
+title: Pelatihan dan Pendampingan Pengolahan Pangan Bergizi Berbasis Hasil
+  Pertanian dan Peternakan Lokal
+date: 2026-06-28T00:00:00.000+07:00
+label: Pelatihan
+image: /img/galeri-01-pelatihan-pengolahan-pangan.jpeg
+excerpt: Pelatihan pengolahan pangan bergizi berbasis hasil pertanian dan
+  peternakan lokal untuk memperkuat ketahanan pangan keluarga dan mencegah
+  stunting.
 ---
 Kamang Mudiak — Tim PBW bersama kelompok mitra menggelar pelatihan dan pendampingan pengolahan pangan bergizi yang memanfaatkan hasil pertanian dan peternakan lokal Nagari Kamang Mudiak.
 
